@@ -1,16 +1,16 @@
 import React from 'react'
-import RadioGroup, { Radio } from '../src/components/Radio'
+import Radio from '../src/components/Radio'
 
 export default function index() {
     return (
         <>
-            <RadioGroup onChange={(updatedState: string) => {
+            <Radio.Group onChange={(updatedState: string) => {
                 console.log(updatedState)
             }}>
-                <Radio name="friut" value="apple" />
-                <Radio name="friut" value="banana" disabled />
-                <Radio name="friut" value="orange" initOnMount/>
-            </RadioGroup>
+                <Radio.Item name="friut" value="apple" />
+                <Radio.Item name="friut" value="banana" disabled />
+                <Radio.Item name="friut" value="orange" initOnMount/>
+            </Radio.Group>
             
         </>
     )
